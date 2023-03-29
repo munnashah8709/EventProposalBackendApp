@@ -11,7 +11,6 @@ require("./schemas/user")
 require("./schemas/vendor")
 require("./schemas/proposal")
 
-const cors = require('cors');
 const allowedOrigins = ['http://localhost:3000']
 app.use(cors({
   origin: function (origin, callback) {
