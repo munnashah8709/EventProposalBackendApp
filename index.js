@@ -11,16 +11,7 @@ require("./schemas/user")
 require("./schemas/vendor")
 require("./schemas/proposal")
 
-const allowedOrigins = ['http://localhost:3000']
-app.use(cors({
-  origin: function (origin, callback) {
-    if (!origin || allowedOrigins.includes(origin)) {
-      callback(null, true)
-    } else {
-      callback(new Error('Not allowed by CORS'))
-    }
-  }
-}))
+app.use(cors());
 
 app.use(express.json())
 app.use(require("./routes/users"))
